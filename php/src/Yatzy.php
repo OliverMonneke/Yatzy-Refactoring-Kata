@@ -29,21 +29,16 @@ class Yatzy
     }
 
     /**
-     * @param int $d1
-     * @param int $d2
-     * @param int $d3
-     * @param int $d4
-     * @param int $d5
      * @return int
      */
-    public static function chance(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public function chance(): int
     {
         $total = 0;
-        $total += $d1;
-        $total += $d2;
-        $total += $d3;
-        $total += $d4;
-        $total += $d5;
+        $total += $this->dice[0];
+        $total += $this->dice[1];
+        $total += $this->dice[2];
+        $total += $this->dice[3];
+        $total += $this->dice[4];
         return $total;
     }
 
