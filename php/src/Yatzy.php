@@ -11,6 +11,14 @@ class Yatzy
      */
     private array $dice;
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function chance(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $total = 0;
@@ -24,6 +32,7 @@ class Yatzy
 
     /**
      * @param array<int, int> $dice
+     * @return int
      */
     public static function yatzyScore(array $dice): int
     {
@@ -38,6 +47,14 @@ class Yatzy
         return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -55,6 +72,14 @@ class Yatzy
         return $sum;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function twos(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -72,6 +97,14 @@ class Yatzy
         return $sum;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function threes(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $s = 0;
@@ -89,6 +122,13 @@ class Yatzy
         return $s;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $_5
+     */
     public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
     {
         $this->dice = array_fill(0, 6, 0);
@@ -99,6 +139,9 @@ class Yatzy
         $this->dice[4] = $_5;
     }
 
+    /**
+     * @return int
+     */
     public function fours(): int
     {
         $sum = 0;
@@ -110,6 +153,9 @@ class Yatzy
         return $sum;
     }
 
+    /**
+     * @return int
+     */
     public function Fives(): int
     {
         $s = 0;
@@ -120,6 +166,9 @@ class Yatzy
         return $s;
     }
 
+    /**
+     * @return int
+     */
     public function sixes(): int
     {
         $sum = 0;
@@ -129,6 +178,14 @@ class Yatzy
         return $sum;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function score_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = array_fill(0, 6, 0);
@@ -143,6 +200,14 @@ class Yatzy
         return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function two_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = array_fill(0, 6, 0);
@@ -165,6 +230,14 @@ class Yatzy
             return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function three_of_a_kind(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $t = array_fill(0, 6, 0);
@@ -179,6 +252,14 @@ class Yatzy
         return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function smallStraight(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $tallies = array_fill(0, 6, 0);
@@ -196,6 +277,14 @@ class Yatzy
         return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function largeStraight(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $tallies = array_fill(0, 6, 0);
@@ -213,6 +302,14 @@ class Yatzy
         return 0;
     }
 
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
+     * @param int $d5
+     * @return int
+     */
     public static function fullHouse(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $tallies = [];
