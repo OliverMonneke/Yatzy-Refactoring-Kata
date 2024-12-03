@@ -16,6 +16,23 @@ class Yatzy
      * @param int $d2
      * @param int $d3
      * @param int $d4
+     * @param int $_5
+     */
+    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
+    {
+        $this->dice = array_fill(0, 6, 0);
+        $this->dice[0] = $d1;
+        $this->dice[1] = $d2;
+        $this->dice[2] = $d3;
+        $this->dice[3] = $d4;
+        $this->dice[4] = $_5;
+    }
+
+    /**
+     * @param int $d1
+     * @param int $d2
+     * @param int $d3
+     * @param int $d4
      * @param int $d5
      * @return int
      */
@@ -120,23 +137,6 @@ class Yatzy
             $s += 3;
 
         return $s;
-    }
-
-    /**
-     * @param int $d1
-     * @param int $d2
-     * @param int $d3
-     * @param int $d4
-     * @param int $_5
-     */
-    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
-    {
-        $this->dice = array_fill(0, 6, 0);
-        $this->dice[0] = $d1;
-        $this->dice[1] = $d2;
-        $this->dice[2] = $d3;
-        $this->dice[3] = $d4;
-        $this->dice[4] = $_5;
     }
 
     /**
