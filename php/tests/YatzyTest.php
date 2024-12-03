@@ -28,22 +28,22 @@ class YatzyTest extends TestCase
 
     public function test_1s(): void
     {
-        self::assertSame(1, Yatzy::ones(1, 2, 3, 4, 5));
-        self::assertSame(2, Yatzy::ones(1, 2, 1, 4, 5));
-        self::assertSame(0, Yatzy::ones(6, 2, 2, 4, 5));
-        self::assertSame(4, Yatzy::ones(1, 2, 1, 1, 1));
+        self::assertSame(1, (new Yatzy(1, 2, 3, 4, 5))->ones());
+        self::assertSame(2, (new Yatzy(1, 2, 1, 4, 5))->ones());
+        self::assertSame(0, (new Yatzy(6, 2, 2, 4, 5))->ones());
+        self::assertSame(4, (new Yatzy(1, 2, 1, 1, 1))->ones());
     }
 
     public function test_2s(): void
     {
-        self::assertSame(4, Yatzy::twos(1, 2, 3, 2, 6));
-        self::assertSame(10, Yatzy::twos(2, 2, 2, 2, 2));
+        self::assertSame(4, (new Yatzy(1, 2, 3, 2, 6))->twos());
+        self::assertSame(10, (new Yatzy(2, 2, 2, 2, 2))->twos());
     }
 
     public function test_3s(): void
     {
-        self::assertSame(6, Yatzy::threes(1, 2, 3, 2, 3));
-        self::assertSame(12, Yatzy::threes(2, 3, 3, 3, 3));
+        self::assertSame(6, (new Yatzy(1, 2, 3, 2, 3))->threes());
+        self::assertSame(12, (new Yatzy(2, 3, 3, 3, 3))->threes());
     }
 
     public function test_4s(): void
@@ -55,9 +55,9 @@ class YatzyTest extends TestCase
 
     public function test_5s(): void
     {
-        self::assertSame(10, (new Yatzy(4, 4, 4, 5, 5))->Fives());
-        self::assertSame(15, (new Yatzy(4, 4, 5, 5, 5))->Fives());
-        self::assertSame(20, (new Yatzy(4, 5, 5, 5, 5))->Fives());
+        self::assertSame(10, (new Yatzy(4, 4, 4, 5, 5))->fives());
+        self::assertSame(15, (new Yatzy(4, 4, 5, 5, 5))->fives());
+        self::assertSame(20, (new Yatzy(4, 5, 5, 5, 5))->fives());
     }
 
     public function test_6s(): void
